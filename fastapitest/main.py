@@ -16,6 +16,6 @@ app.include_router(users.router)
 app.include_router(languages.router)
 app.include_router(auth.router)
 
-# @app.get("/sqlalchemytest")
+# @app.get("/sqlalchemytest")v
 # def test(db: Session = Depends(get_db)):
 #     print({'msg':'seems to work'})
