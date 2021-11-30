@@ -16,7 +16,10 @@ config = context.config
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 fileConfig(config.config_file_name)
-config.set_main_option("sqlalchemy.url", f"mssql+pymssql://{settings.db_user_languages}:{settings.db_pass_languages}@{settings.db_host_languages}/{settings.db_name_languages}")
+# config.set_main_option("sqlalchemy.url", f"mssql+pymssql://{settings.db_user_languages}:{settings.db_pass_languages}@{settings.db_host_languages}/{settings.db_name_languages}")
+
+config.set_main_option("sqlalchemy.url", f"postgresql://{settings.db_user_languages}:{settings.db_pass_languages}@{settings.db_host_languages}/{settings.DB_NAME}")
+
 # add your model's MetaData object here
 # for 'autogenerate' support
 # from myapp import mymodel
