@@ -10,7 +10,7 @@ from .config import settings
 # SQLALCHEMY_DATABASE_URL = "mssql+pymssql://raindata5:natalia@localhost/flask_notifications"
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
 # SQLALCHEMY_DATABASE_URL = f"mssql+pymssql://{settings.db_user_languages}:{settings.db_pass_languages}@{settings.db_host_languages}/{settings.db_name_languages}"
-SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.db_user_languages}:{settings.db_pass_languages}@{settings.db_host_languages}/{settings.DB_NAME}"
+SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.db_user_languages}:{settings.db_pass_languages}@{settings.db_host_languages}/{settings.db_name_languages}"
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
 )
