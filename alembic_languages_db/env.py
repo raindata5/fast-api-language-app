@@ -6,8 +6,8 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from fastapitest.models import Base
-from fastapitest.config import settings
+from fastapiapp.models import Base
+from fastapiapp.config import settings
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
