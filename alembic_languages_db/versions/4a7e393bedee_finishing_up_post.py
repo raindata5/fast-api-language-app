@@ -21,7 +21,7 @@ def upgrade():
     sa.Column("Name", sa.String(40), unique=True, nullable=False ),
     sa.Column("Origin", sa.String(40), nullable=False ),
     sa.Column("Description", sa.String(400), server_default="C\'est l\'une des meilleurs" ),
-    sa.Column("created_at", sa.DATETIME(timezone=True), nullable= False, server_default=text('SYSUTCDATETIME()')),
+    sa.Column("created_at", sa.TIMESTAMP(timezone=True), nullable= False, server_default=text('now()')),
     sa.Column("UserID", sa.Integer, nullable=False)
     )
 

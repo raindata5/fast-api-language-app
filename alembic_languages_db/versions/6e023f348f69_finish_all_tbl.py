@@ -22,7 +22,7 @@ def upgrade():
     sa.Column('userid', sa.Integer(), nullable=False),
     sa.Column('email', sa.String(length=40), nullable=False),
     sa.Column('password', sa.String(), nullable=False),
-    sa.Column('created_at', sa.DATETIME(timezone=True), server_default=sa.text('SYSUTCDATETIME()'), nullable=False),
+    sa.Column('created_at', sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=False),
     sa.PrimaryKeyConstraint('userid'),
     sa.UniqueConstraint('email')
     )
@@ -31,7 +31,7 @@ def upgrade():
     sa.Column('name', sa.String(length=40), nullable=False),
     sa.Column('origin', sa.String(), nullable=False),
     sa.Column('description', sa.String(), server_default="C'est belle comme langue", nullable=True),
-    sa.Column('created_at', sa.DATETIME(timezone=True), server_default=sa.text('SYSUTCDATETIME()'), nullable=False),
+    sa.Column('created_at', sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=False),
     sa.Column('userid', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['userid'], ['User.userid'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('languageid'),

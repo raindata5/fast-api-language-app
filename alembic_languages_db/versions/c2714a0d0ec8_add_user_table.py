@@ -21,7 +21,7 @@ def upgrade():
     op.create_table("User", sa.Column("UserID", sa.Integer, primary_key=True, nullable=False),
     sa.Column("email", sa.String(40), unique=True, nullable=False ),
     sa.Column("password", sa.String(300), nullable=False),
-    sa.Column("created_at", sa.DATETIME(timezone=True), nullable= False, server_default=text('SYSUTCDATETIME()'))
+    sa.Column("created_at", sa.TIMESTAMP(timezone=True), nullable= False, server_default=text('now()'))
     )
     pass
 
