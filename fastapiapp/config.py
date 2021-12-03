@@ -10,6 +10,12 @@ class Settings(BaseSettings):
     secret_key_languages: str
     algorithm_languages: str
     ACCESS_TOKEN_EXPIRE_MINUTES_languages: int
+    DB_HOST: str
+    DB_PORT: str
+    DB_PASS: str
+    DB_NAME: str
+    DB_USER: str
+    secret_key: str
 
     class Config:
         env_file = ".env"
