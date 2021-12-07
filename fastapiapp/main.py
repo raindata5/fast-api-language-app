@@ -11,6 +11,9 @@ from fastapi.middleware.cors import CORSMiddleware
 origins =[
     "*"
 ]
+
+
+    
 app = FastAPI()
 
 
@@ -22,13 +25,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 app.include_router(spokenlanguages.router)
 app.include_router(users.router)
 app.include_router(languages.router)
 app.include_router(auth.router)
 
-# @app.get("/sqlalchemytest")v
-# def test(db: Session = Depends(get_db)):
-#     print({'msg':'seems to work'})
-
-
+@app.get('/')
+def home():
+    return {"message": "Connectec ^_^"}
