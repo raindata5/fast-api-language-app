@@ -1,14 +1,12 @@
-name: GitHub Actions FastAPI Deploy
-on: 
-  push:
-    branches: ["master"]
-
+name: learn-github-actions
+on: [push]
 jobs:
-  test-ga-1:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: pull the repo
-        uses: actions/checkout@v2.4.0
-      - name: orden aleatoria
-        uses: echo "a ver si entiendes"
-      - name: See where origin is pointing to so I don't destroy everything
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
