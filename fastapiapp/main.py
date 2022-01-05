@@ -26,11 +26,23 @@ app.add_middleware(
 )
 
 
+
+
 app.include_router(spokenlanguages.router)
 app.include_router(users.router)
 app.include_router(languages.router)
 app.include_router(auth.router)
 
+
+
+
+
+
+
+
+# redis_client.set('apidatastarbucks01', json.dumps({"location":"Miami"}))
+
+
 @app.get('/')
 def home():
-    return {"message": "Connectec ^_^"}
+    return {"message": "Connected ^_^"}

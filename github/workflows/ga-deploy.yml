@@ -1,0 +1,14 @@
+name: GitHub Actions FastAPI Deploy
+on: 
+  push:
+    branches: ["master"]
+
+jobs:
+  test-ga-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull the repo
+        uses: actions/checkout@v2.4.0
+      - name: orden aleatoria
+        uses: echo "a ver si entiendes"
+      - name: See where origin is pointing to so I don't destroy everything

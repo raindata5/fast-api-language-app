@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     DB_NAME: str
     DB_USER: str
     secret_key: str
+    POSTGRES_PASSWORD: str
+    POSTGRES_DB: str
+    postgres_redis: str
 
     class Config:
         env_file = ".env"

@@ -33,7 +33,7 @@ def post_spoken_language(language: schemas.SpokenLanguageSchema, db: Session = D
         return link_lang
     
 
-
+    # method for bypassing 201
     if (spoken_language or not spoken_language) and language.active == 0:
         spoken_language_query.delete(synchronize_session=False)
         db.commit()

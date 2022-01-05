@@ -1,0 +1,21 @@
+version: "3"
+services: 
+    api:
+        build: .
+        ports: 
+            - 8000:8000
+        env_file:
+          - ./.env
+        # environment: 
+        #   -
+    postgres:
+      image: postgres
+      environment: 
+        - POSTGRES_PASSWORD=dockerpostgresadmin
+        - POSTGRES_DB=fastapi-docker
+      volumes:
+        - fastapi-docker-db:/var/lib/postgresql/data
+
+volumes: 
+    fastapi-docker-db:
+

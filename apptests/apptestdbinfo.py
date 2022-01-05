@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+# def run_migrations(script_location: str, dsn: str) -> None:
+#     alembic_cfg = Config()
+#     alembic_cfg.set_main_option('script_location', script_location)
+#     alembic_cfg.set_main_option('sqlalchemy.url', dsn)
+#     command.upgrade(alembic_cfg, 'head')
+
+
+# def downgrade(script_location: str, dsn: str) -> None:
+#     alembic_cfg = Config('\\Users\\Ron\\git-repos\\fast-api-languages-orig\\alembic.ini')
+#     alembic_cfg.set_main_option('script_location', script_location)
+#     alembic_cfg.set_main_option('sqlalchemy.url', dsn)
+
+
+
+    
+
+
