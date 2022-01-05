@@ -45,4 +45,4 @@ app.include_router(auth.router)
 
 @app.get('/')
 def home():
-    return {"message": "Connected ^_^"}
+    return {"message": "Connected ^_"}
